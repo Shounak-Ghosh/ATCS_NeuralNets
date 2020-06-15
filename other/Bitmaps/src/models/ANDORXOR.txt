@@ -1,0 +1,65 @@
+Change numbers to desired values 
+Be very careful when modifying or adding non-numerical text 
+
+Model Format: 
+   Input Size: 2
+   Number of hidden layers: 1
+   Hidden Layer Sizes: { 6 } 
+   Output Size: 3
+   Threshold Function (Must be 'linear' or 'sigmoid'): sigmoid
+
+Weights: 
+   m j i val 
+   0 0 0 3.2682728435283748
+   0 0 1 -6.883213373109132
+   0 0 2 -0.3357420755413867
+   0 0 3 2.6309832130944346
+   0 0 4 -5.013621748946873
+   0 0 5 -2.745494056210705
+   0 1 0 -7.455881954629247
+   0 1 1 2.903982894801353
+   0 1 2 -2.255082577956083
+   0 1 3 0.7510419851921141
+   0 1 4 -5.305767305328218
+   0 1 5 -3.2122658570381546
+   1 0 0 -6.575244200867622
+   1 0 1 -2.721570508454477
+   1 0 2 7.136645397700578
+   1 1 0 -6.530827382229867
+   1 1 1 -1.2714379272649743
+   1 1 2 6.1063412076531485
+   1 2 0 -2.0501355886494825
+   1 2 1 -0.7160359617209028
+   1 2 2 -0.6049904416921196
+   1 3 0 3.8736886631776586
+   1 3 1 7.577469909108457
+   1 3 2 -3.3572235474977847
+   1 4 0 -3.1872248004211046
+   1 4 1 -6.001912308523397
+   1 4 2 -12.359870361362299
+   1 5 0 -2.1069260951101514
+   1 5 1 -3.8374748219723154
+   1 5 2 -3.324605549126972
+
+Test Cases: 
+   Num Cases: 4 
+
+   Example: 
+      { input1 input2 ... }, { output1 output2 ... } 
+
+   Actual: 
+      { 0.0 0.0 }, { 0.0 0.0 0.0 }
+      { 0.0 1.0 }, { 0.0 1.0 1.0 }
+      { 1.0 0.0 }, { 0.0 1.0 1.0 }
+      { 1.0 1.0 }, { 1.0 1.0 0.0 }
+
+Training Config: 
+   Initial Learning Factor: 5.0
+   Learning Factor Modifier: 1.0
+   Learning Factor Minimum: 1.0E-300
+   Maximum Number of Iterations: 10000
+   Maximum Acceptable Error (for all test case to have): 0.0001
+   Minimum Value for Randomized Weights: -2.0
+   Maximum Value for Randomized Weights: 2.0
+   Number of Iterations between saving weights 
+   (set to zero or negative to only save after training completes): 10000
